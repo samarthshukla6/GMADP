@@ -1,28 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
+
+# GMADP Donations App
+
+## Overview
+
+The GMADP Donations App is a web application designed to manage donations for the GMADP organization. This app includes functionalities such as user authentication, managing donations, generating custom receipts, and administrative controls. The frontend is built with TypeScript and Tailwind CSS, the backend utilizes MongoDB and Express.js, and the authentication is handled by NextAuth. The application is thoroughly tested, achieving 93% coverage using Jest.
+
+## Features
+
+- **User Authentication:** Secure login and registration using NextAuth, with support for credentials-based authentication.
+- **Manage Donations:** Users can add, delete, view, and search donations efficiently.
+- **Custom Receipts:** Generate custom donation receipts in PDF format using pdfMake.
+- **Admin Controls:** Admin users have the ability to add new users to the system.
+- **Responsive Design:** The UI is fully responsive and styled using Tailwind CSS.
+- **Extensive Testing:** The app is covered by comprehensive tests, achieving 93% code coverage using Jest.
+
+## Tech Stack
+
+- **Frontend:** Next.js, TypeScript, Tailwind CSS
+- **Backend:** Express.js, MongoDB
+- **Authentication:** NextAuth.js
+- **PDF Generation:** pdfMake
+- **Testing:** Jest
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Ensure you have the following installed on your system:
+
+- Node.js
+- MongoDB
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/gmadp-donations-app.git
+   cd gmadp-donations-app
+   ```
+
+2. **Install Node modules:**
+
+   Install the required Node.js dependencies using npm:
+
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables:**
+
+   Create a `.env.local` file in the root directory and add the following environment variables:
+
+   ```bash
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your_secret
+   MONGO_DB_CONNECTION_STRING=your_mongodb_connection_string
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+   The app will be available at `http://localhost:3000`.
+
+### Running Tests
+
+To run the tests and check the code coverage:
 
 ```bash
-npm run dev
+npm run test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This will execute the Jest test suite, and you can view the coverage report to ensure that the tests are comprehensive.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Admin Setup
 
-## Learn More
+To add an admin user, you can use the admin interface to create a new user with admin privileges. Ensure that the necessary admin roles are assigned to manage users within the app.
 
-To learn more about Next.js, take a look at the following resources:
+## Usage
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Donations Management:** After logging in, users can add new donations, view existing ones, delete donations, and search through the donations list.
+- **Receipt Generation:** On the donations page, click on the "Generate Receipt" button to download a custom PDF receipt for any donation.
+- **Admin Controls:** Admin users can navigate to the admin panel to add new users to the system.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
