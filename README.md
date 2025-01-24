@@ -37,7 +37,7 @@ Ensure you have the following installed on your system:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/gmadp-donations-app.git
+   git clone https://github.com/samarthshukla6/GMADP.git
    cd gmadp-donations-app
    ```
 
